@@ -18,11 +18,13 @@ def retics_count_eval(retics_count):
 print('Analysing...')
 time.sleep(5.0)
 
-if (hb < 14.0 and retics_count < 0.2 and mcv <100):
+#mcv = 80-100fl
+
+if (hb < 14.0 and retics_count < 0.2 and mcv <80):
     print('The observed anaemia could be due to one of the following: \n Iron deficiency secondary to chronic blood lose \n Thalassemia')
-elif ((hb < 14.0 and retics_count < 0.2) and (10000 <= mcv <= 30000)):
+elif ((hb < 14.0 and retics_count < 0.2) and (80 <= mcv <= 100)):
     print('The observed anaemia could be due to one of the following: \n ACD \n Antiviral drugs \n Tumor/Infection in bone marrow')
-elif ((hb < 14.0 and retics_count < 0.2) and (mcv >= 30000)):
+elif ((hb < 14.0 and retics_count < 0.2) and (mcv >= 100)):
     print('The observed anaemia could be due to one of the following: \n Medication \n Cancer Chemotherapy \n Myelodysplasia \n Vitamin B₁₂ deficiency \n Alcohol abuse \n Liver disease ')
 else:
     print('To be determined soon')
